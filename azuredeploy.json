@@ -20,7 +20,15 @@
         "[resourceId('Microsoft.Web/serverfarms', 'ArmTemplatesPlan')]"
       ],
       "properties": {
-        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', 'ArmTemplatesPlan')]"
+        "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', 'ArmTemplatesPlan')]",
+        "siteConfig": {
+          "appSettings": [
+            {
+              "name": "Link_to_blog",
+              "value": "https://grzn.ru"
+            }
+          ]
+        }
       }
     }
   ]
